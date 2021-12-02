@@ -1,9 +1,13 @@
+# INFECTION MAIN GAME
+# Ran when main game period is started
+
+
 team modify players friendlyFire true
 scoreboard players set period time 2
 
 # Infect a random player
 team leave @a[team=infected]
-execute as @a at @s run playsound minecraft:entity.zombie_villager.cure player @s
+execute as @a at @s if score sound_effects global matches 1 run playsound minecraft:entity.zombie_villager.cure player @s
 team join infected @r
 team join alive @a[team=!spec,team=!infected]
 tag @a[team=alive] add alive

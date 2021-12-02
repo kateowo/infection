@@ -11,7 +11,7 @@ scoreboard players set time time 0
 scoreboard players set time_seconds time 0
 scoreboard players set timer_enabled global 1
 
-execute as @a at @s run playsound minecraft:entity.generic.explode player @s ~ ~ ~ 100 1.5
+execute as @a at @s if score sound_effects global matches 1 run playsound minecraft:entity.generic.explode player @s ~ ~ ~ 100 1.5
 
 function infection:starter_period
 

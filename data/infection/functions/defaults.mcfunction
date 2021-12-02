@@ -10,8 +10,8 @@ scoreboard objectives add lastlogin dummy
 
 # Internal time settings - used for cross-referencing, should not be modified unless you know what you're doing
 # Length of starter period since started (in seconds)
-scoreboard players set starter_period time 10
-scoreboard players set victory_timeout time 1000
+scoreboard players set starter_period time 480
+scoreboard players set victory_timeout time 700
 
 # Disable the timer by default
 scoreboard players set timer_enabled global 0
@@ -20,7 +20,7 @@ scoreboard players set timer_enabled global 0
 # OPTIONS
 # Toggles whether a height limit is set in place
 scoreboard players set height_limit global 1
-scoreboard players set height_limit_y global 128
+scoreboard players set height_limit_temp internal 115
 # Controls if sound effects are played throughout
 scoreboard players set sound_effects global 1
 # Auto-enchant tools and auto-smelt food/ores

@@ -1,6 +1,7 @@
 # INFECTION MAIN LOOP
 # Ran constantly throughout the game
 
+
 # Try to find a player and load setup-flow
 execute as @a unless score setup_flow internal matches 1 run function infection:setup_flow
 
@@ -22,6 +23,8 @@ bossbar set infection:period players @a
 # Options
 execute if score cut_clean global matches 1 run function infection:cut_clean
 execute if score speed_uhc global matches 1 run function infection:speed_uhc
+# Implement height limit (if enabled)
+execute if score height_limit global matches 1 run function infection:height_limit
 
 # Run winning checks
 execute if score period time matches 2 run function infection:victory_checks
