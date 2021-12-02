@@ -29,11 +29,12 @@ execute if score period time matches 2 run function infection:victory_checks
 # Summon particles
 execute as @a[team=infected] at @s run particle minecraft:spore_blossom_air ~ ~0.5 ~ 0 0 0 0 2
 
-# Survivors proportioned health
+# Run commands based on amount of infected
 execute unless score period time matches -1 run function infection:health_boost
+# Give infected compass
+execute as @a[team=infected,nbt=!{Inventory:[{id:"minecraft:compass"}]}] at @s run function infection:compass
 
-# Give infected armour
-execute unless score period time matches -1 unless score period time matches 0 run function infection:give_sets
+effect give @a[team=infected] speed 9999 0 true
 
 # Actionbars
 title @a[team=alive] actionbar ["",{"text":"YOU ARE ","color":"dark_green"},{"text":"ALIVE","bold":true,"color":"green"},{"text":", SURVIVE THE INFECTED","color":"dark_green"}]

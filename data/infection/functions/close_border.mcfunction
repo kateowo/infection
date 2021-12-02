@@ -1,1 +1,1 @@
-worldborder set 1000
+worldborder set 500 800
