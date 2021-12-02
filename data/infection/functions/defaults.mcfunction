@@ -20,7 +20,7 @@ scoreboard players set timer_enabled global 0
 # OPTIONS
 # Toggles whether a height limit is set in place
 scoreboard players set height_limit global 1
-scoreboard players set height_limit_temp internal 115
+scoreboard players set height_limit_temp internal 145
 # Controls if sound effects are played throughout
 scoreboard players set sound_effects global 1
 # Auto-enchant tools and auto-smelt food/ores
