@@ -21,6 +21,7 @@ scoreboard players operation percent alive_players /= total alive_players
 
 # 20-35%
 execute if score percent alive_players matches 20..35 unless score percent25 internal matches 1 run scoreboard players set percent25 internal 0
+execute if score percent alive_players matches 20..35 unless score percent25 internal matches 1 run effect give @a[team=alive] health_boost 9999 0 true
 execute if score percent alive_players matches 20..35 unless score percent25 internal matches 1 if score period time matches 2 run worldborder set 300 400
 # If time is over the new max, set to ~200 below the new max
 execute if score percent alive_players matches 20..35 unless score percent25 internal matches 1 run scoreboard players set timeout_temp internal 600
@@ -31,6 +32,7 @@ execute if score percent alive_players matches 20..35 unless score percent25 int
 
 # 36-50%
 execute if score percent alive_players matches 36..50 unless score percent50 internal matches 1 run scoreboard players set percent50 internal 0
+execute if score percent alive_players matches 36..50 unless score percent50 internal matches 1 run effect give @a[team=alive] health_boost 9999 1 true
 execute if score percent alive_players matches 36..50 unless score percent50 internal matches 1 if score period time matches 2 run worldborder set 200 300
 # If time is over the new max, set to ~200 below the new max
 execute if score percent alive_players matches 36..50 unless score percent50 internal matches 1 run scoreboard players set timeout_temp internal 400
@@ -41,6 +43,7 @@ execute if score percent alive_players matches 36..50 unless score percent50 int
 
 # 60-100%
 execute if score percent alive_players matches 60..100 unless score percent75 internal matches 1 run scoreboard players set percent75 internal 0
+execute if score percent alive_players matches 60..100 unless score percent75 internal matches 1 run effect give @a[team=alive] health_boost 9999 2 true
 execute if score percent alive_players matches 60..100 unless score percent75 internal matches 1 if score period time matches 2 run worldborder set 100 200
 # If time is over the new max, set to ~200 below the new max
 execute if score percent alive_players matches 60..100 unless score percent75 internal matches 1 run scoreboard players set timeout_temp internal 200
