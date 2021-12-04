@@ -12,3 +12,5 @@ execute if score time_seconds time = starter_period time if score period time ma
 
 # Stores current timer & max y level in the bossbar
 execute unless score period time matches 2 store result bossbar infection:period value run scoreboard players get time_seconds time
+
+execute store result score border time run worldborder get

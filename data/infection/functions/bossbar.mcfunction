@@ -10,7 +10,7 @@ execute if score period time matches 0 run bossbar set infection:period color gr
 execute if score period time matches 0 run bossbar set infection:period name ["",{"text":"INFECTION","bold":true,"color":"dark_green"},{"text":" \u0020 \u0020Starting period","bold":true,"color":"green"},{"text":", 8 minutes until a random person is infected","color":"green"}]
 # Main game
 execute if score period time matches 2 run bossbar set infection:period color green
-execute if score period time matches 2 run bossbar set infection:period name ["",{"text":"INFECTION","bold":true,"color":"dark_green"},{"text":" \u0020 \u0020ALIVE:","color":"dark_green"},{"text":" "},{"score":{"name":"alive","objective":"alive_players"},"bold":true,"color":"green"},{"text":" \u0020 INFECTED:","color":"dark_green"},{"text":" "},{"score":{"name":"infected","objective":"alive_players"},"bold":true,"color":"green"}]
+execute if score period time matches 2 run bossbar set infection:period name ["",{"text":"INFECTION","bold":true,"color":"dark_green"},{"text":" \u0020 \u0020ALIVE:","color":"dark_green"},{"text":" "},{"score":{"name":"alive","objective":"alive_players"},"bold":true,"color":"green"},{"text":" \u0020 INFECTED:","color":"dark_green"},{"text":" "},{"score":{"name":"infected","objective":"alive_players"},"bold":true,"color":"green"},{"text":" \u0020 BORDER:","color":"dark_green"},{"text":" "},{"score":{"name":"border","objective":"time"},"bold":true,"color":"green"}]
 execute if score period time matches 2 store result bossbar infection:period value run scoreboard players get time_seconds time
 execute if score period time matches 2 store result bossbar infection:period max run scoreboard players get victory_timeout time
 # Victory/game end
