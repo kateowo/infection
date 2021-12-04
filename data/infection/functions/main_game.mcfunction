@@ -14,6 +14,8 @@ tag @a[team=alive] add alive
 # Give sets to infected
 function infection:give_sets
 
+scoreboard players set victory_timeout time 1800
+
 # Up alive counters
 execute as @a[team=alive] run scoreboard players add alive alive_players 1
 execute as @a[team=infected] run scoreboard players add infected alive_players 1

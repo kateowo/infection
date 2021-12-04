@@ -48,7 +48,7 @@ scoreboard players reset infected alive_players
 # Create both the alive and the infected team
 # ALIVE
 team add alive
-team modify alive friendlyFire false
+team modify alive friendlyFire true
 # INFECTED
 team add infected
 team modify infected color green
@@ -56,6 +56,9 @@ team modify infected friendlyFire false
 
 # Set initial world difficulty
 difficulty peaceful
+
+# World border
+worldborder damage buffer 45
 
 # Ensure defaults are not reset upon /reload
 scoreboard players set defaults global 1
