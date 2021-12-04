@@ -7,7 +7,7 @@ execute if score period time matches -1 run bossbar set infection:period name ["
 # Starter period
 execute if score period time matches 0 store result bossbar infection:period max run scoreboard players get starter_period time
 execute if score period time matches 0 run bossbar set infection:period color green
-execute if score period time matches 0 run bossbar set infection:period name ["",{"text":"INFECTION","bold":true,"color":"dark_green"},{"text":" \u0020 \u0020Starting period","bold":true,"color":"green"},{"text":", 5 minutes until the infected is released","color":"green"}]
+execute if score period time matches 0 run bossbar set infection:period name ["",{"text":"INFECTION","bold":true,"color":"dark_green"},{"text":" \u0020 \u0020Starting period","bold":true,"color":"green"},{"text":", 8 minutes until a random person is infected","color":"green"}]
 # Main game
 execute if score period time matches 2 run bossbar set infection:period color green
 execute if score period time matches 2 run bossbar set infection:period name ["",{"text":"INFECTION","bold":true,"color":"dark_green"},{"text":" \u0020 \u0020ALIVE:","color":"dark_green"},{"text":" "},{"score":{"name":"alive","objective":"alive_players"},"bold":true,"color":"green"},{"text":" \u0020 INFECTED:","color":"dark_green"},{"text":" "},{"score":{"name":"infected","objective":"alive_players"},"bold":true,"color":"green"}]
