@@ -48,7 +48,7 @@ scoreboard players reset infected alive_players
 # Create both the alive and the infected team
 # ALIVE
 team add alive
-team modify alive friendlyFire true
+team modify alive friendlyFire false
 # INFECTED
 team add infected
 team modify infected color green
