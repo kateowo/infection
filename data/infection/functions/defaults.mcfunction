@@ -31,7 +31,7 @@ scoreboard players set speed_uhc global 1
 scoreboard players set 100 internal 100
 
 # World settings
-gamerule doImmediateRespawn false
+gamerule doImmediateRespawn true
 gamerule keepInventory false
 worldborder set 10
 
