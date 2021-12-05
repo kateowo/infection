@@ -12,7 +12,7 @@ team join infected @r
 team join alive @a[team=!spec,team=!infected]
 tag @a[team=alive] add alive
 
-scoreboard players set victory_timeout time 1800
+scoreboard players set victory_timeout time 2500
 
 # Up alive counters
 execute as @a[team=alive] run scoreboard players add alive alive_players 1
