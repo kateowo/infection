@@ -37,7 +37,11 @@ execute unless score period time matches -1 run function infection:health_boost
 # Give infected compass
 execute as @a[team=infected,nbt=!{Inventory:[{id:"minecraft:compass"}]}] at @s run function infection:compass
 
+effect give @a[team=infected] saturation 9999 255 true
 effect give @a[team=infected] speed 9999 0 true
+
+execute unless score percent75 internal matches 1 run effect give @a[team=infected] strength 9999 1 true
+execute if score percent75 internal matches 1 run effect clear @a[team=infected] strength
 
 # Actionbars
 title @a[team=alive] actionbar ["",{"text":"YOU ARE ","color":"dark_green"},{"text":"ALIVE","bold":true,"color":"green"},{"text":", SURVIVE THE INFECTED","color":"dark_green"}]

@@ -11,8 +11,6 @@ execute as @a at @s if score sound_effects global matches 1 run playsound minecr
 team join infected @r
 team join alive @a[team=!spec,team=!infected]
 tag @a[team=alive] add alive
-# Give sets to infected
-function infection:give_sets
 
 scoreboard players set victory_timeout time 1800
 
