@@ -1,5 +1,5 @@
-# Infection [PRE-RELEASE]
+# Infection
 
-## THIS IS CURRENTLY IN DEVELOPMENT, SHOULD NOT BE USED FOR AN EVENT
+Play in a halo-inspired Infection minigame for Minecraft. Gather resources for 8 minutes before one player is randomly infected. Their goal is to kill off and infect all the survivors in the game. If all the survivors are infected before the timer runs out, the infected team will win; otherwise, the survivors will win. Who will come out victorious?
 
-## UPDATE 04/12 - RELEASE SOON!
+MORE INFO AVAILABLE @ [PLEXION.DEV](https://l.plexion.dev/infection)
