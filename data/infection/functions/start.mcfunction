@@ -7,8 +7,8 @@ title @a[team=infected] subtitle {"text":"You have 5 minutes to prepare before a
 
 
 # Timings
-scoreboard players set time time 0
-scoreboard players set time_seconds time 0
+scoreboard players set time internal 0
+scoreboard players set time_s internal 0
 scoreboard players set timer_enabled global 1
 
 execute as @a at @s if score sound_effects global matches 1 run playsound minecraft:entity.generic.explode player @s ~ ~ ~ 100 1.5

@@ -4,13 +4,13 @@
 
 
 # Game states (periods) and tracking player's last-login (to avoid abuse)
-scoreboard players set period time -1
+scoreboard players set period internal -1
 scoreboard players set @a lastlogin -1
 scoreboard objectives add lastlogin dummy
 
 # Internal time settings - used for cross-referencing, should not be modified unless you know what you're doing
 # Length of starter period since started (in seconds)
-scoreboard players set starter_period time 480
+scoreboard players set starter_period internal 480
 scoreboard players set victory_timeout time 700
 
 # Disable the timer by default
@@ -26,6 +26,8 @@ scoreboard players set sound_effects global 1
 # Auto-enchant tools and auto-smelt food/ores
 scoreboard players set cut_clean global 1
 scoreboard players set speed_uhc global 1
+# Toggles whether the last survivor will glow
+scoreboard players set glow_last_survivor global 1
 
 # Internal values
 scoreboard players set 100 internal 100
@@ -36,14 +38,12 @@ gamerule keepInventory false
 worldborder set 10
 
 # Create a scoreboard to track alive players (for both teams)
-scoreboard objectives add alive_players dummy
-scoreboard objectives modify alive_players displayname {"text":"INFECTION","color":"green","bold":true}
 bossbar add infection:period {"text":""}
 bossbar set infection:period players @a
 
 # Teams
-scoreboard players reset alive alive_players
-scoreboard players reset infected alive_players
+scoreboard players reset alive internal
+scoreboard players reset infected internal
 
 # Create both the alive and the infected team
 # ALIVE
