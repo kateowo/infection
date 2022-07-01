@@ -1,7 +1,6 @@
 # INFECTED ALIVE VICTORY
 
 
-# Set game-state
 scoreboard players set period time 3
 
 # Show titles
