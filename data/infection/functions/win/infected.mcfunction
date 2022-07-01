@@ -1,11 +1,12 @@
-# INFECTED ALIVE VICTORY
+# INFECTED 'INFECTED' VICTORY
 
 
-scoreboard players set period time 3
+# Set game-state
+scoreboard players set period internal 3
 
 # Show titles
-title @a title {"text":"SURVIVORS WIN!","color":"green","bold":true}
-title @a subtitle [{"text":"The infected failed to infect everyone in time.."}]
+title @a title {"text":"INFECTED WIN!","color":"green","bold":true}
+title @a subtitle [{"text":"Everyone was infected.."}]
 # Announce sound
 execute as @a at @s if score sound_effects global matches 1 run playsound minecraft:ui.toast.challenge_complete player @s ~ ~ ~
 # Effects

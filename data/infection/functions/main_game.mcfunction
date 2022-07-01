@@ -3,7 +3,7 @@
 
 
 team modify players friendlyFire true
-scoreboard players set period time 2
+scoreboard players set period internal 2
 
 # Infect a random player
 team leave @a[team=infected]
@@ -27,4 +27,4 @@ effect clear @a weakness
 effect clear @a regeneration
 effect clear @a resistance
 
-scoreboard players set time_seconds time 0
+scoreboard players set time_s internal 0

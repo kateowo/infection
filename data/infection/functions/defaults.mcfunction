@@ -4,13 +4,13 @@
 
 
 # Game states (periods) and tracking player's last-login (to avoid abuse)
-scoreboard players set period time -1
+scoreboard players set period internal -1
 scoreboard players set @a lastlogin -1
 scoreboard objectives add lastlogin dummy
 
 # Internal time settings - used for cross-referencing, should not be modified unless you know what you're doing
 # Length of starter period since started (in seconds)
-scoreboard players set starter_period time 480
+scoreboard players set starter_period internal 480
 scoreboard players set victory_timeout time 700
 
 # Disable the timer by default
