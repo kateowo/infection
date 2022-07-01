@@ -26,6 +26,8 @@ scoreboard players set sound_effects global 1
 # Auto-enchant tools and auto-smelt food/ores
 scoreboard players set cut_clean global 1
 scoreboard players set speed_uhc global 1
+# Toggles whether the last survivor will glow
+scoreboard players set glow_last_survivor global 1
 
 # Internal values
 scoreboard players set 100 internal 100

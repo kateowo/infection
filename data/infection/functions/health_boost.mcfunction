@@ -53,5 +53,4 @@ execute if score percent internal matches 80..100 unless score percent100 intern
 
 
 # Apply glowing to last survivor
-## TODO: add option for last player glowing
-execute if score alive internal matches 1 run effect give @a[team=alive] glowing 9999 255 true
+execute if score glow_last_survivor global matches 1.. if score alive internal matches 1 run effect give @a[team=alive] glowing 9999 255 true
