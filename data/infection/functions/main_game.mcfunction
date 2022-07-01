@@ -15,8 +15,8 @@ tag @a[team=alive] add alive
 scoreboard players set victory_timeout time 2500
 
 # Up alive counters
-execute as @a[team=alive] run scoreboard players add alive alive_players 1
-execute as @a[team=infected] run scoreboard players add infected alive_players 1
+execute as @a[team=alive] run scoreboard players add alive internal 1
+execute as @a[team=infected] run scoreboard players add infected internal 1
 
 title @a[team=!infected] title ["",{"selector":"@a[team=infected]","bold":true,"color":"#007A00"},{"text":" has been infected!","color":"dark_green"}]
 title @a subtitle {"text":"The games have begun, your actionbar will display your current role.","color":"white"}

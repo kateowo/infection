@@ -36,14 +36,12 @@ gamerule keepInventory false
 worldborder set 10
 
 # Create a scoreboard to track alive players (for both teams)
-scoreboard objectives add alive_players dummy
-scoreboard objectives modify alive_players displayname {"text":"INFECTION","color":"green","bold":true}
 bossbar add infection:period {"text":""}
 bossbar set infection:period players @a
 
 # Teams
-scoreboard players reset alive alive_players
-scoreboard players reset infected alive_players
+scoreboard players reset alive internal
+scoreboard players reset infected internal
 
 # Create both the alive and the infected team
 # ALIVE

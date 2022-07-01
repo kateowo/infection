@@ -17,5 +17,5 @@ gamemode adventure @a[team=alive]
 
 
 # Reset scores
-scoreboard players reset alive alive_players
-scoreboard players reset infected alive_players
+scoreboard players reset alive internal
+scoreboard players reset infected internal
