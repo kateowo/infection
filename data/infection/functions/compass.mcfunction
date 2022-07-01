@@ -3,9 +3,9 @@
 
 
 # Kill any dropped compasses
-kill @e[type=item,nbt={Item:{id:"minecraft:compass"}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:compass",tag:{tag:{survivor_compass:1b}}}}]
 # Summon a new compass
-execute at @s run summon item ~ ~ ~ {PickupDelay:0s,Tags:["temp"],Item:{id:"minecraft:compass",Count:1b,tag:{display:{Name:'[{"text":""},{"text":"Survivor Compass","color":"dark_green","bold":true,"italic":false},{"text":" (drop to update)","italic":true}]',Lore:['{"text":"Tracks the nearest survivor","color":"gray","italic":false}']},LodestoneTracked:0b,LodestoneDimension:"minecraft:overworld"}}}
+execute at @s run summon item ~ ~ ~ {PickupDelay:0s,Tags:["temp"],Item:{id:"minecraft:compass",Count:1b,tag:{survivor_compass:1b,display:{Name:'[{"text":""},{"text":"Survivor Compass","color":"dark_green","bold":true,"italic":false},{"text":" (drop to update)","italic":true}]',Lore:['{"text":"Tracks the nearest survivor","color":"gray","italic":false}']},LodestoneTracked:0b,LodestoneDimension:"minecraft:overworld"}}}
 
 # Modify compass owner UUID to track
 data modify entity @e[type=item,tag=temp,limit=1] Owner set from entity @s UUID
