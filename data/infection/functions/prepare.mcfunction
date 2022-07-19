@@ -2,7 +2,6 @@
 
 
 # scoreboards
-scoreboard objectives add time dummy
 scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 scoreboard objectives add death deathCount
