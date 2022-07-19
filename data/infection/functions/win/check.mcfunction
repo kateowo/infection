@@ -3,7 +3,7 @@
 
 
 # Alive
-execute if score time_s internal = victory_timeout time if score period internal matches 2 run function infection:win/alive
+execute if score time_s internal = victory_timeout internal if score period internal matches 2 run function infection:win/alive
 
 # Infected
 execute if score alive internal matches ..0 if score infected internal matches 1.. if score period internal matches 2 run function infection:win/infected

@@ -8,33 +8,30 @@ scoreboard players set period internal -1
 scoreboard players set @a lastlogin -1
 scoreboard objectives add lastlogin dummy
 
-# Internal time settings - used for cross-referencing, should not be modified unless you know what you're doing
-# Length of starter period since started (in seconds)
+# internal time settings
+## should be left unless you know what you're doing
 scoreboard players set starter_period internal 480
-scoreboard players set victory_timeout time 700
-
-# Disable the timer by default
-scoreboard players set timer_enabled global 0
+## automatically set by datapack throughout
+scoreboard players set victory_timeout internal 700
 
 
 # OPTIONS
-# Toggles whether a height limit is set in place
+## build height limit
 scoreboard players set height_limit global 1
 scoreboard players set height_limit_temp internal 145
-# Controls if sound effects are played throughout
+## sound effects
 scoreboard players set sound_effects global 1
-# Auto-enchant tools and auto-smelt food/ores
+## cut clean & speed uhc
 scoreboard players set cut_clean global 1
 scoreboard players set speed_uhc global 1
-# Toggles whether the last survivor will glow
+## last survivor glows
 scoreboard players set glow_last_survivor global 1
 
-# Internal values
-scoreboard players set 100 internal 100
 
-# World settings
+# world
 gamerule doImmediateRespawn true
 gamerule keepInventory false
+difficulty easy
 worldborder set 10
 
 # Create a scoreboard to track alive players (for both teams)

@@ -18,7 +18,7 @@ execute if score percent internal matches 20..35 unless score percent25 internal
 execute if score percent internal matches 20..35 unless score percent25 internal matches 1 if score period internal matches 2 run worldborder set 450 400
 # Set new victory timeout
 execute if score percent internal matches 20..35 unless score percent25 internal matches 1 run scoreboard players set time_s internal 0
-execute if score percent internal matches 20..35 unless score percent25 internal matches 1 run scoreboard players set victory_timeout time 1100
+execute if score percent internal matches 20..35 unless score percent25 internal matches 1 run scoreboard players set victory_timeout internal 1100
 execute if score percent internal matches 20..35 unless score percent25 internal matches 1 run scoreboard players set percent25 internal 1
 
 # 36-50%
@@ -28,7 +28,7 @@ execute if score percent internal matches 36..50 unless score percent50 internal
 execute if score percent internal matches 36..50 unless score percent50 internal matches 1 if score period internal matches 2 run worldborder set 300 400
 # Set new victory timeout
 execute if score percent internal matches 36..50 unless score percent50 internal matches 1 run scoreboard players set time_s internal 0
-execute if score percent internal matches 36..50 unless score percent50 internal matches 1 run scoreboard players set victory_timeout time 800
+execute if score percent internal matches 36..50 unless score percent50 internal matches 1 run scoreboard players set victory_timeout internal 800
 execute if score percent internal matches 36..50 unless score percent50 internal matches 1 run scoreboard players set percent50 internal 1
 
 # 60-79%
@@ -38,7 +38,7 @@ execute if score percent internal matches 60..79 unless score percent75 internal
 execute if score percent internal matches 60..79 unless score percent75 internal matches 1 if score period internal matches 2 run worldborder set 260 400
 # Set new victory timeout
 execute if score percent internal matches 60..79 unless score percent75 internal matches 1 run scoreboard players set time_s internal 0
-execute if score percent internal matches 60..79 unless score percent75 internal matches 1 run scoreboard players set victory_timeout time 450
+execute if score percent internal matches 60..79 unless score percent75 internal matches 1 run scoreboard players set victory_timeout internal 450
 execute if score percent internal matches 60..79 unless score percent75 internal matches 1 run scoreboard players set percent75 internal 1
 
 # 80-100%
@@ -48,7 +48,7 @@ execute if score percent internal matches 80..100 unless score percent100 intern
 execute if score percent internal matches 80..100 unless score percent100 internal matches 1 if score period internal matches 2 run worldborder set 120 400
 # Set new victory timeout
 execute if score percent internal matches 80..100 unless score percent100 internal matches 1 run scoreboard players set time_s internal 0
-execute if score percent internal matches 80..100 unless score percent100 internal matches 1 run scoreboard players set victory_timeout time 100
+execute if score percent internal matches 80..100 unless score percent100 internal matches 1 run scoreboard players set victory_timeout internal 100
 execute if score percent internal matches 80..100 unless score percent100 internal matches 1 run scoreboard players set percent100 internal 1
 
 

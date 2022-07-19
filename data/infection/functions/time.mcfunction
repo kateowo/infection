@@ -15,7 +15,7 @@ execute if score period internal matches -1 run scoreboard players set @a lastlo
 ## [0] grace
 execute as @a at @s if score period internal matches 0 unless score @s lastlogin matches 0 run effect clear @s weakness
 execute as @a at @s if score period internal matches 0 unless score @s lastlogin matches 0 run effect clear @s regeneration
-execute as @a at @s if score period internal matches 0 unless score @s lastlogin matches 0 run effect give @s resistance 120 255 true
+execute as @a at @s if score period internal matches 0 unless score @s lastlogin matches 0 run effect give @s resistance 9999 255 true
 execute as @a at @s if score period internal matches 0 unless score @s lastlogin matches 0 run gamemode survival @s
 execute as @a at @s if score period internal matches 0 unless score @s lastlogin matches 0 run scoreboard players set @s lastlogin 0
 ## [1] main
@@ -44,7 +44,7 @@ execute if score period internal matches 0 run bossbar set infection:period name
 execute if score period internal matches 2 run bossbar set infection:period color green
 execute if score period internal matches 2 run bossbar set infection:period name ["",{"text":"INFECTION","bold":true,"color":"dark_green"},{"text":" \u0020 \u0020ALIVE:","color":"dark_green"},{"text":" "},{"score":{"name":"alive","objective":"internal"},"bold":true,"color":"green"},{"text":" \u0020 INFECTED:","color":"dark_green"},{"text":" "},{"score":{"name":"infected","objective":"internal"},"bold":true,"color":"green"},{"text":" \u0020 BORDER:","color":"dark_green"},{"text":" "},{"score":{"name":"border","objective":"time"},"bold":true,"color":"green"}]
 execute if score period internal matches 2 store result bossbar infection:period value run scoreboard players get time_s internal
-execute if score period internal matches 2 store result bossbar infection:period max run scoreboard players get victory_timeout time
+execute if score period internal matches 2 store result bossbar infection:period max run scoreboard players get victory_timeout internal
 ## [3] win
 execute if score period internal matches 3 run bossbar set infection:period color green
 execute if score period internal matches 3 run bossbar set infection:period name ["",{"text":"INFECTION","bold":true,"color":"dark_green"},{"text":" \u0020 \u0020The game has ended!","color":"green"}]

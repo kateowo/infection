@@ -15,5 +15,7 @@ scoreboard objectives add death deathCount
 # Store player Y axis
 scoreboard objectives add y dummy
 
+scoreboard players set 100 internal 100
+
 # Runs through defaults unless they have already ran
 execute unless score defaults global matches 1 run function infection:defaults
