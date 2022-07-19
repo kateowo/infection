@@ -1,5 +1,4 @@
-# INFECTION MAIN LOOP
-# Ran constantly throughout the game
+# INFECTION main loop
 
 
 # Try to find a player and load setup-flow
@@ -12,8 +11,6 @@ execute if score period internal matches -1 as @a at @s unless block ~ ~1 ~ #inf
 
 # Runs the necessary functions & stores variables
 execute if score timer_enabled global matches 1 unless score period internal matches 3 run function infection:time
-# Display bossbar
-function infection:bossbar
 # Death tracking (+ reset before perma deaths can happen, @Bluetofu___ for pointing that out)
 execute as @a if score @s death matches 1.. if score period internal matches 2 run function infection:death
 execute unless score period internal matches 2 run scoreboard players reset @a[scores={death=1..}] death
