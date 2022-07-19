@@ -1,29 +1,32 @@
 # INFECTION main loop
 
 
-# Try to find a player and load setup-flow
+# world
+bossbar set infection:period players @a
+
+# time loop
+execute if score period internal matches 0..2 run function infection:time
+
+# setup flow
+## only runs once
 execute as @a unless score setup_flow internal matches 1 run function infection:setup_flow
 
-# Move up player if they spawn underground
+# ensure player is not stuck
 execute if score period internal matches -1 as @a at @s unless block ~ ~1 ~ #infection:safe run tp @s ~ ~5 ~ 
 
 
-
-# Runs the necessary functions & stores variables
-execute if score timer_enabled global matches 1 unless score period internal matches 3 run function infection:time
 # Death tracking (+ reset before perma deaths can happen, @Bluetofu___ for pointing that out)
 execute as @a if score @s death matches 1.. if score period internal matches 2 run function infection:death
 execute unless score period internal matches 2 run scoreboard players reset @a[scores={death=1..}] death
 # Show bossbar to all players
 bossbar set infection:period players @a
 
-# Options
-execute if score cut_clean global matches 1 run function infection:cut_clean
-execute if score speed_uhc global matches 1 run function infection:speed_uhc
-# Implement height limit (if enabled)
-execute if score height_limit global matches 1 run function infection:height_limit
+# options
+execute if score cut_clean global matches 1.. run function infection:extras/cut_clean
+execute if score speed_uhc global matches 1.. run function infection:extras/speed_uhc
+execute if score height_limit global matches 1.. run function infection:extras/height_limit
 
-# Run winning checks
+# win checks
 execute if score period internal matches 2 run function infection:win/check
 
 # Summon particles

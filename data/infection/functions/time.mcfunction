@@ -3,28 +3,26 @@
 
 function fm:clock
 
-execute if score time_s internal = starter_period internal if score period internal matches 0 run function infection:main_game
-
 # last login
-## [-1] pre-game
+## -1, pre-start
 execute if score period internal matches -1 run gamemode adventure @a[gamemode=!adventure]
 execute if score period internal matches -1 run effect give @a weakness 9999 255 true
 execute if score period internal matches -1 run effect give @a resistance 9999 255 true
 execute if score period internal matches -1 run effect give @a regeneration 9999 255 true
 execute if score period internal matches -1 run scoreboard players set @a last_login -1
-## [0] grace
+## 0, grace period
 execute as @a at @s if score period internal matches 0 unless score @s last_login matches 0 run effect clear @s weakness
 execute as @a at @s if score period internal matches 0 unless score @s last_login matches 0 run effect clear @s regeneration
 execute as @a at @s if score period internal matches 0 unless score @s last_login matches 0 run effect give @s resistance 9999 255 true
 execute as @a at @s if score period internal matches 0 unless score @s last_login matches 0 run gamemode survival @s
 execute as @a at @s if score period internal matches 0 unless score @s last_login matches 0 run scoreboard players set @s last_login 0
-## [1] main
+## 1, main game
 execute as @a at @s if score period internal matches 1 unless score @s last_login matches 1 run effect clear @s weakness
 execute as @a at @s if score period internal matches 1 unless score @s last_login matches 1 run effect clear @s regeneration
 execute as @a at @s if score period internal matches 1 unless score @s last_login matches 1 run effect clear @s resistance
 execute as @a at @s if score period internal matches 1 unless score @s last_login matches 1 run gamemode survival @s
 execute as @a at @s if score period internal matches 1 unless score @s last_login matches 1 run scoreboard players set @s last_login 1
-## [3] win
+## 3, victory
 execute as @a at @s if score period internal matches 3 unless score @s last_login matches 3 run effect clear @s weakness
 execute as @a at @s if score period internal matches 3 unless score @s last_login matches 3 run effect clear @s regeneration
 execute as @a at @s if score period internal matches 3 unless score @s last_login matches 3 run effect clear @s resistance
@@ -50,6 +48,9 @@ execute if score period internal matches 3 run bossbar set infection:period colo
 execute if score period internal matches 3 run bossbar set infection:period name ["",{"text":"INFECTION","bold":true,"color":"dark_green"},{"text":" \u0020 \u0020The game has ended!","color":"green"}]
 execute if score period internal matches 3 run bossbar set infection:period max 1
 execute if score period internal matches 3 run bossbar set infection:period value 1
+
+# end starter period
+execute if score time_s internal >= starter_period internal if score period internal matches 0 run function infection:main_game
 
 # worldborder
 execute store result score border time run worldborder get
