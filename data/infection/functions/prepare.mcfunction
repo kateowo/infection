@@ -1,21 +1,14 @@
-# INFECTION Preparation
-# Runs before anything else and whenever /reload is triggered
-# Ensures CORE scoreboards exist
+# INFECTION /reload
 
 
-# Creates the required scoreboards
-# Timing game-states etc.
+# scoreboards
 scoreboard objectives add time dummy
-# User-config
 scoreboard objectives add global dummy
-# Internal settings
 scoreboard objectives add internal dummy
-# Death tracking
 scoreboard objectives add death deathCount
-# Store player Y axis
 scoreboard objectives add y dummy
 
 scoreboard players set 100 internal 100
 
-# Runs through defaults unless they have already ran
-execute unless score defaults global matches 1 run function infection:defaults
+# defaults
+execute unless score defaults internal matches 1.. run function infection:defaults

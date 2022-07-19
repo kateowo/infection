@@ -5,8 +5,8 @@
 
 # Game states (periods) and tracking player's last-login (to avoid abuse)
 scoreboard players set period internal -1
-scoreboard players set @a lastlogin -1
-scoreboard objectives add lastlogin dummy
+scoreboard players set @a last_login -1
+scoreboard objectives add last_login dummy
 
 # internal time settings
 ## should be left unless you know what you're doing
@@ -58,4 +58,4 @@ difficulty peaceful
 worldborder damage buffer 45
 
 # Ensure defaults are not reset upon /reload
-scoreboard players set defaults global 1
+scoreboard players set defaults internal 1
