@@ -18,6 +18,7 @@ scoreboard players set victory_timeout internal 2500
 execute as @a[team=alive] run scoreboard players add alive internal 1
 execute as @a[team=infected] run scoreboard players add infected internal 1
 
+title @a[team=infected] title ["",{"text":"You","bold":true,"color":"#007A00"},{"text":" have been infected!","color":"dark_green"}]
 title @a[team=!infected] title ["",{"selector":"@a[team=infected]","bold":true,"color":"#007A00"},{"text":" has been infected!","color":"dark_green"}]
 title @a subtitle {"text":"The games have begun, your actionbar will display your current role.","color":"white"}
 
