@@ -1,4 +1,4 @@
-# INFECTION INFECTED VICTORY
+# INFECTION infected victory
 
 
 scoreboard players set period internal 3

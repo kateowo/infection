@@ -26,31 +26,24 @@ scoreboard players set glow_last_survivor global 1
 
 # world
 worldborder set 10
+worldborder damage buffer 45
 gamerule doImmediateRespawn true
 gamerule keepInventory false
-difficulty easy
+difficulty peaceful
 
 # bossbar
 bossbar add infection:period ""
 
-# Teams
+# teams
+## alive
 scoreboard players reset alive internal
-scoreboard players reset infected internal
-
-# Create both the alive and the infected team
-# ALIVE
 team add alive
 team modify alive friendlyFire false
-# INFECTED
+## infected
+scoreboard players reset infected internal
 team add infected
 team modify infected color green
 team modify infected friendlyFire false
 
-# Set initial world difficulty
-difficulty peaceful
 
-# World border
-worldborder damage buffer 45
-
-# Ensure defaults are not reset upon /reload
 scoreboard players set defaults internal 1

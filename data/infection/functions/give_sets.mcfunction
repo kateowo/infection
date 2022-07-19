@@ -1,5 +1,5 @@
-# INFECTION ARMOUR SETS
-# Will auto-give the infected a curse-of-binding+vanishing set of armour so they can't get OP loot
+# INFECTION armour sets
+## given to infected
 
 
 item replace entity @a[team=infected] armor.head with leather_helmet{display:{Name:'{"text":"Infected Helmet","color":"green","bold":true,"italic":false}',color:3729499},HideFlags:69,Unbreakable:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s},{id:"minecraft:vanishing_curse",lvl:1s}]} 1

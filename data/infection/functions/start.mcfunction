@@ -1,4 +1,4 @@
-# INFECTION START SCRIPT
+# INFECTION start
 
 
 # announce
@@ -12,6 +12,7 @@ worldborder set 1000 10
 schedule function infection:close_border 10s
 gamemode survival @a[gamemode=!spectator]
 gamerule naturalRegeneration true
+difficulty easy
 
 # set period
 scoreboard players set period internal 0
