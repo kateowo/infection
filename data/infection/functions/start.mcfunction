@@ -1,18 +1,22 @@
 # INFECTION start
+## (if requirements met)
 
 
-# announce
-title @a title {"text":"INFECTION","color":"green"}
-title @a subtitle {"text":"You have 5 minutes to prepare before a random player is infected!","color":"white"}
-# sfx
-execute as @a at @s if score sound_effects global matches 1 run playsound minecraft:entity.generic.explode player @s ~ ~ ~ 100 1.5
+scoreboard players set can_start internal 0
 
-# world
-worldborder set 1000 10
-schedule function infection:close_border 10s
-gamemode survival @a[gamemode=!spectator]
-gamerule naturalRegeneration true
-difficulty easy
+# count up players
+## alive
+scoreboard players reset start_alive internal
+execute as @a[team=alive] run scoreboard players add start_alive internal 1
+## infected
+scoreboard players reset start_infected internal
+execute as @a[team=infected] run scoreboard players add start_infected internal 1
 
-# set period
-scoreboard players set period internal 0
+# check
+## atleast 1 alive & infected
+execute if score start_alive internal matches 1.. if score start_infected internal matches 1.. run scoreboard players set can_start internal 1
+
+
+# run
+execute unless score can_start internal matches 1.. run tellraw @s ["",{"text":"[","color":"dark_gray"},{"text":"X","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Cannot start, atleast 1 player must be infected with every other player alive.","color":"green"}]
+execute if score can_start internal matches 1.. run function infection:start_c
