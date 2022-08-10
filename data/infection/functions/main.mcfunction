@@ -10,10 +10,6 @@ bossbar set infection:period players @a
 # time loop
 execute if score period internal matches 0..2 run function infection:time
 
-# setup flow
-## only runs once
-execute as @a unless score setup_flow internal matches 1 run function infection:setup_flow
-
 # ensure player is not stuck
 execute if score period internal matches -1 as @a at @s unless block ~ ~1 ~ #infection:safe run tp @s ~ ~5 ~ 
 
