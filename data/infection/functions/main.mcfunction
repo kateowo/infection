@@ -1,6 +1,9 @@
 # INFECTION main loop
 
 
+# setup
+execute as @a unless score setup internal matches 1.. run function infection:setup/go
+
 # world
 bossbar set infection:period players @a
 
