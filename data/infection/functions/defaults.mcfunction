@@ -16,7 +16,7 @@ scoreboard players set speed_uhc global 1
 
 # build height limit
 scoreboard players set height_limit global 1
-scoreboard players set height_limit_temp internal 145
+scoreboard players set height_limit_temp internal 200
 
 # sound effects
 scoreboard players set sound_effects global 1
