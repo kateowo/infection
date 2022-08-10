@@ -16,7 +16,7 @@ execute if score period internal matches -1 as @a at @s unless block ~ ~1 ~ #inf
 
 
 # death checks
-## reset before perma deaths can happen (@Bluetofu___ for pointing that out)
+## reset before deaths are tracked
 execute as @a if score @s death matches 1.. if score period internal matches 2 run function infection:death
 execute unless score period internal matches 2 run scoreboard players reset @a[scores={death=1..}] death
 
