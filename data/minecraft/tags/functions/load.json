@@ -1,6 +1,5 @@
 {
     "values": [
-      "infection:prepare" 
-     ] 
-  }
-  
+        "infection:load" 
+    ] 
+}
