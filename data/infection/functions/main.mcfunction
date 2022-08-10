@@ -22,7 +22,7 @@ execute unless score period internal matches 2 run scoreboard players reset @a[s
 # options
 execute if score cut_clean global matches 1.. run function infection:extras/cut_clean
 execute if score speed_uhc global matches 1.. run function infection:extras/speed_uhc
-execute if score speed_uhc global matches 1.. run function infection:extras/grindstone
+execute if score speed_uhc global matches 1.. if score patch_grindstone_exploit global matches 1.. run function infection:extras/grindstone
 execute if score height_limit global matches 1.. run function infection:extras/height_limit
 
 # win checks
