@@ -25,7 +25,12 @@ scoreboard players set sound_effects global 1
 scoreboard players set glow_last_survivor global 1
 
 # infected gain speed
+## see main.mcfunction
 scoreboard players set infected_speed_boost global 1
+
+# alive gain health boost
+## see health_boost.mcfunction
+scoreboard players set alive_health_boost global 1
 
 # patch grindstone exploit
 ## introduced in 2022.0811
