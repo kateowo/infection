@@ -24,6 +24,9 @@ scoreboard players set sound_effects global 1
 # last survivor glows
 scoreboard players set glow_last_survivor global 1
 
+# infected gain speed
+scoreboard players set infected_speed_boost global 1
+
 # patch grindstone exploit
 ## introduced in 2022.0811
 scoreboard players set patch_grindstone_exploit global 1

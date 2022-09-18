@@ -38,7 +38,8 @@ execute unless score period internal matches -1 run function infection:health_bo
 execute as @a[team=infected,nbt=!{Inventory:[{id:"minecraft:compass",tag:{tag:{survivor_compass:1b}}}]}] at @s run function infection:compass
 ## effects
 effect give @a[team=infected] saturation 9999 40 true
-effect give @a[team=infected] speed 9999 0 true
+execute if score infected_speed_boost global matches 1.. run effect give @a[team=infected] speed 9999 0 true
+
 execute unless score percent75 internal matches 1 run effect give @a[team=infected] strength 9999 1 true
 execute if score percent75 internal matches 1 run effect clear @a[team=infected] strength
 
