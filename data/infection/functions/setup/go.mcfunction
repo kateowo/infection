@@ -16,6 +16,18 @@ execute if score height_limit global matches 1.. run tellraw @s ["",{"text":"Bui
 ## disabled
 execute unless score height_limit global matches 1.. run tellraw @s ["",{"text":"Build height limit \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Limits the build height to y200."}]}},{"text":" ","color":"dark_gray"},{"text":"✔","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/height_limit/on"}},{"text":" ","color":"dark_gray"},{"text":" [","color":"white"},{"text":"X","color":"red","bold":true},{"text":"]","color":"white"}]
 
+# infected speed boost
+## enabled
+execute if score infected_speed_boost global matches 1.. run tellraw @s ["",{"text":"Infected speed boost \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Gives the infected a permanent speed boost to prevent an infinite chase!"}]}},{"text":"[","color":"white"},{"text":"✔","color":"green","bold":true},{"text":"]","color":"white"},{"text":"  ","color":"dark_gray"},{"text":"X","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/infected_speed_boost/off"}},{"text":" ","color":"dark_gray"}]
+## disabled
+execute unless score infected_speed_boost global matches 1.. run tellraw @s ["",{"text":"Infected speed boost \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Gives the infected a permanent speed boost to prevent an infinite chase!"}]}},{"text":" ","color":"dark_gray"},{"text":"✔","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/infected_speed_boost/on"}},{"text":" ","color":"dark_gray"},{"text":" [","color":"white"},{"text":"X","color":"red","bold":true},{"text":"]","color":"white"}]
+
+# alive health boost
+## enabled
+execute if score alive_health_boost global matches 1.. run tellraw @s ["",{"text":"Alive health boost \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Gives the alive players extra health based on the percentage infected."}]}},{"text":"[","color":"white"},{"text":"✔","color":"green","bold":true},{"text":"]","color":"white"},{"text":"  ","color":"dark_gray"},{"text":"X","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/alive_health_boost/off"}},{"text":" ","color":"dark_gray"}]
+## disabled
+execute unless score alive_health_boost global matches 1.. run tellraw @s ["",{"text":"Alive health boost \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Gives the alive players extra health based on the percentage infected."}]}},{"text":" ","color":"dark_gray"},{"text":"✔","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/alive_health_boost/on"}},{"text":" ","color":"dark_gray"},{"text":" [","color":"white"},{"text":"X","color":"red","bold":true},{"text":"]","color":"white"}]
+
 # glow last survivor
 ## enabled
 execute if score glow_last_survivor global matches 1.. run tellraw @s ["",{"text":"Glow last survivor \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Gives the last remaining survivor a glowing effect."}]}},{"text":"[","color":"white"},{"text":"✔","color":"green","bold":true},{"text":"]","color":"white"},{"text":"  ","color":"dark_gray"},{"text":"X","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/glow_last_survivor/off"}},{"text":" ","color":"dark_gray"}]
