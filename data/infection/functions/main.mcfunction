@@ -31,7 +31,7 @@ execute if score period internal matches 2 run function infection:win/check
 
 # run commands for infected
 ## particles
-execute as @a[team=infected] at @s run particle minecraft:spore_blossom_air ~ ~0.5 ~ 0 0 0 0 2
+execute as @a[team=infected] at @s run particle minecraft:block minecraft:lime_concrete_powder ~ ~0.8 ~ 0 0 0 0 2
 ## health boost
 execute unless score period internal matches -1 run function infection:health_boost
 ## tracker compass
