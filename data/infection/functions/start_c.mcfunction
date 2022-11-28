@@ -13,6 +13,7 @@ execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~
 # world
 worldborder set 1000 10
 schedule function infection:system/border/close 10s
+team join alive @a[gamemode=!spectator]
 
 # set period
 scoreboard players set period internal 0

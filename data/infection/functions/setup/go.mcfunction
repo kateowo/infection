@@ -46,9 +46,6 @@ execute if score speed_uhc global matches 1.. run tellraw @s ["",{"text":"Speed 
 ## disabled
 execute unless score speed_uhc global matches 1.. run tellraw @s ["",{"text":"Speed UHC \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Automatically enchants tools with efficiency."}]}},{"text":" ","color":"dark_gray"},{"text":"✔","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/speed_uhc/on"}},{"text":" ","color":"dark_gray"},{"text":" [","color":"white"},{"text":"X","color":"red","bold":true},{"text":"]","color":"white"}]
 
-## notice
-tellraw @s ["",{"text":"\nBefore starting, add players to either the ","color":"yellow"},{"text":"infected","color":"green"},{"text":" or the ","color":"yellow"},{"text":"alive","color":"green"},{"text":" teams.\n","color":"yellow"}]
-
 ## footer
 tellraw @s ["",{"text":"\nOnce you're ready, run "},{"text":"/function infection:start","color":"yellow","underlined":true,"clickEvent":{"action":"run_command","value":"/function infection:start"}},{"text":" and let the games begin!\n"}]
 

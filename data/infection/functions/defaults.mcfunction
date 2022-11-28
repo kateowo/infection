@@ -18,18 +18,15 @@ scoreboard players set speed_uhc global 1
 scoreboard players set height_limit global 0
 scoreboard players set height_limit_temp internal 200
 
-# sound effects
-scoreboard players set sound_effects global 1
-
 # last survivor glows
 scoreboard players set glow_last_survivor global 1
 
 # infected gain speed
-## see main.mcfunction
+## see main
 scoreboard players set infected_speed_boost global 1
 
 # alive gain health boost
-## see health_boost.mcfunction
+## see health_boost
 scoreboard players set alive_health_boost global 1
 
 # patch grindstone exploit
@@ -42,20 +39,6 @@ worldborder damage buffer 45
 gamerule doImmediateRespawn true
 gamerule keepInventory false
 difficulty peaceful
-
-# bossbar
-bossbar add infection:period ""
-
-# teams
-## alive
-scoreboard players reset alive internal
-team add alive
-team modify alive friendlyFire false
-## infected
-scoreboard players reset infected internal
-team add infected
-team modify infected color green
-team modify infected friendlyFire false
 
 
 scoreboard players set defaults internal 1
