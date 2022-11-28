@@ -17,6 +17,9 @@ execute unless score can_start_alive internal matches 1.. unless score can_start
 execute if score period internal matches -1 run scoreboard players set can_start_period internal 1
 execute unless score can_start_period internal matches 1.. run tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"X","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Cannot start, a game is already in progress.","color":"red"}]
 
+## debug!
+execute if score debug internal matches 77 run scoreboard players set can_start internal 1
+
 
 # can start?
 ## yes, proceed to main start
