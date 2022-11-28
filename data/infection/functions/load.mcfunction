@@ -1,9 +1,12 @@
 # INFECTION /reload
 
 
-# scoreboards
 scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
+scoreboard objectives add last_login dummy
+
+
+
 scoreboard objectives add death deathCount
 scoreboard objectives add y dummy
 
