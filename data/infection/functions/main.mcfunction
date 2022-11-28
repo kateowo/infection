@@ -11,7 +11,7 @@ bossbar set infection:period players @a
 execute if score period internal matches 0..2 run function infection:time
 
 # ensure player is not stuck
-execute if score period internal matches -1 as @a at @s unless block ~ ~1 ~ #infection:safe run tp @s ~ ~5 ~ 
+execute if score period internal matches -1 as @a at @s unless block ~ ~1 ~ #infection:safe run tp @s ~ ~5 ~
 
 
 # death checks
@@ -26,7 +26,7 @@ execute if score speed_uhc global matches 1.. if score patch_grindstone_exploit 
 execute if score height_limit global matches 1.. run function infection:extras/height_limit
 
 # win checks
-execute if score period internal matches 2 run function infection:win/check
+execute if score period internal matches 2 run function infection:system/win/check
 
 
 # run commands for infected
