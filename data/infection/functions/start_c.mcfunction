@@ -9,7 +9,7 @@ execute as @a at @s if score sound_effects global matches 1 run playsound minecr
 
 # world
 worldborder set 1000 10
-schedule function infection:close_border 10s
+schedule function infection:system/border/close 10s
 gamemode survival @a[gamemode=!spectator]
 gamerule naturalRegeneration true
 difficulty easy
