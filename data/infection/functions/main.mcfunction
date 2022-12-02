@@ -28,7 +28,7 @@ function infection:time
 # death checks
 execute if score period internal matches 2 as @a at @s if score @s player.death matches 1.. run function infection:system/death/go
 ## reset
-execute unless score period internal matches 2 run scoreboard players reset @a player.death
+scoreboard players reset @a player.death
 
 # win checks
 execute if score period internal matches 2 run function infection:system/win/check
