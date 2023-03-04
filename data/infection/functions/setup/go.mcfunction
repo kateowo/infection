@@ -34,6 +34,9 @@ execute if score glow_last_survivor global matches 1.. run tellraw @s ["",{"text
 ## disabled
 execute unless score glow_last_survivor global matches 1.. run tellraw @s ["",{"text":"Glow last survivor \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Gives the last remaining survivor a glowing effect."}]}},{"text":" ","color":"dark_gray"},{"text":"✔","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/glow_last_survivor/on"}},{"text":" ","color":"dark_gray"},{"text":" [","color":"white"},{"text":"X","color":"red","bold":true},{"text":"]","color":"white"}]
 
+# timer speed
+tellraw @s ["",{"text":"Timer speed \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Controls the speed of the timer ticks counting seconds. (default 20 ticks = 1 second)"}]}},{"text":" ","color":"white"},{"text":"-","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/timer_speed/down"}},{"text":"  ","color":"white"},{"score":{"name":"timer_speed","objective":"global"}},{"text":"  ","color":"dark_gray"},{"text":"+","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/timer_speed/up"}},{"text":" ","color":"dark_gray"}]
+
 # cut clean
 ## enabled
 execute if score cut_clean global matches 1.. run tellraw @s ["",{"text":"Cut Clean \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Automatically smelts ores and cooks food."}]}},{"text":"[","color":"white"},{"text":"✔","color":"green","bold":true},{"text":"]","color":"white"},{"text":"  ","color":"dark_gray"},{"text":"X","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function infection:setup/cut_clean/off"}},{"text":" ","color":"dark_gray"}]

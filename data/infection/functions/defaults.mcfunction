@@ -33,6 +33,10 @@ scoreboard players set alive_health_boost global 1
 ## introduced in 2022.0811
 scoreboard players set patch_grindstone_exploit global 1
 
+# timer speed
+## default 20
+scoreboard players set timer_speed global 20
+
 # world
 worldborder set 10
 worldborder damage buffer 45
